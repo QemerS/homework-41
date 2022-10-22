@@ -8,7 +8,29 @@
 </head>
 <body>
     <script>
+        // TASK - 1 Create a function to concatenate two integer arrays.
+        function concatIntArrs(firstArr = [], secondArr = []) {
+            const conditions =
+                Array.isArray(firstArr) &&
+                Array.isArray(secondArr);
+            if (conditions) {
+                const elConditions =
+                firstArr.every(el => !isNaN(el)) &&
+                secondArr.every(el => !isNaN(el));
+                if (elConditions) {
+                    return firstArr.concat(secondArr);
+                } else {
+                    return 'your array should have only integers';  
+                }
+            } else {
+                return 'please give me an array';
+            }
+        }
         
+        const exIntArr = [1,2,3,4,5];
+        const exStrArr = ['v', 's', 'e'];
+        const exMixedArr = [1,2,3,'v', 's'];
+        console.log(concatIntArrs('h', 3));
     </script>
 </body>
 </html>
