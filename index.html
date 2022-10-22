@@ -30,7 +30,28 @@
         const exIntArr = [1,2,3,4,5];
         const exStrArr = ['v', 's', 'e'];
         const exMixedArr = [1,2,3,'v', 's'];
-        console.log(concatIntArrs('h', 3));
+        // console.log(concatIntArrs('h', 3));
+
+        // TASK - 2 Create a function that takes a number from 1 to 12
+        // adn returns its corresponding month name as a string.
+        // For example, if you've given 3 as inpput, your function sould
+        // return March, because Marc is the 3rd month
+
+        function numToMonth(num) {
+            const monthsArr = ['there is no such a month',
+            'January','February','March','April','May','June',
+            'July','August', 'September', 'October', 'Novermber',
+            'December'];
+            if (!isNaN(num)) {
+                if (num >= 13) {
+                    return monthsArr[0];
+                }
+                return monthsArr[num];
+            } else {
+                return 'please enter a number';
+            }
+        }
+        console.log(numToMonth(1));
     </script>
 </body>
 </html>
