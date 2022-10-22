@@ -55,10 +55,30 @@
 
         // TASK - 3 Write a function to check if an array contains
         // a particular number
-        
+        function check(arr = [], num) {
+            if (arr.includes(num)) {
+                return arr[num];
+            } else {
+                return 'your array is not containing this number';
+            }
+        }
+        // console.log(check([1,2,3], 6));
+
         // TASK - 4 Write a function that returns true
         // if all integers in an array are factors of a number,
         // and false otherwise
+        function checkFactors(arr = [], num) {
+            if (arr.every(el => (num%el === 0))) {
+                const factors = arr.filter(el => num%el === 0);
+                let isAre = factors.length === 1 ? 'is' : 'are';
+                return `Since ${factors} ${isAre} all factors of ${num}.`;
+            } else {
+                const factors = arr.filter(el => !(num%el === 0));
+                let isAre = factors.length === 1 ? 'is' : 'are';
+                return `${factors} ${isAre} not a factor of  ${num}.`;
+            }
+        }
+        // console.log(checkFactors([2,3,13,56], 12));
 
         // TASK - 5 Implement a function that returns an array 
         // containing all the consecutive numbers in ascendant order 
