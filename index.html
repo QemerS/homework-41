@@ -84,6 +84,24 @@
         // containing all the consecutive numbers in ascendant order 
         // from given value 'low' up to the given value 'high'
         // (bounds included)
+        function getSequence(low, high) {
+            let arr = [low]
+            for (let i = low + 1; i < high; i++) {
+                arr.push(i);
+            }
+            arr.push(high);
+            return arr;
+        }
+        function getSequence(low, high) {
+            let arr = [low, high]
+            let x = 1;
+            for (let i = low + 1; i < high; i++) {
+                arr.splice(x, 0, i);
+                ++x;
+            }
+            return arr;
+        }
+        // console.log(getSequence(4,9));
 
         // TASK - 6 array metodlarin tetbiqi:
         // const arr = [32,25,85,89,45,76,7,41,2,12]
