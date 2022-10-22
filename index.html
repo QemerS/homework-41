@@ -104,25 +104,29 @@
         // console.log(getSequence(4,9));
 
         // TASK - 6 array metodlarin tetbiqi:
-        // const arr = [32,25,85,89,45,76,7,41,2,12]
+        const arr = [32,25,85,89,45,76,7,41,2,12]
         // a) arr arrayin butun elementlerini cap edin
-
+        for (const el of arr) {
+            // console.log(el);
+        }
         // b) arr arrayin en boyuk elementini cap edin
-
+        arr.sort((a,b) => a-b);
+        // console.log(arr[arr.length-1]);
         // c) arr arrayin sonuna 15 ededini elave edin
-
+        arr.push(15);
         // d) arr arrayin ilk elementini silin
-
+        arr.shift();
         // e) arr arrayin sort edin ve son elementini cap edin
-
+        // like up in b
         // f) arr arrayin ucuncu elementinden sonra 43 ededini elave edin
-        
+        arr.splice(3, 0, 43);
         // g) arr arrayin arrayin 3cu elementinden sonrakilari cap edin
-        
+        arr.slice(3, arr.length -1);
         // h) arr arrayin butun elementlerini forEach ile cap edin 
-        
+        arr.forEach(e => console.log(e));
         // i) arr arrayin arrayin 40-dan boyuk butun elementlerini
         // cap edin (hem for ile, hem de iteration funksiyasi ile)
+        arr.filter(e => e > 40);
     </script>
 </body>
 </html>
